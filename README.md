@@ -1,6 +1,6 @@
 # Tarea Caballo Ajedrez
-## Profesor: Jos√© Ram√≥n Jim√©nez Reyes
-## Alumno:
+## Profesor: JosÈ RamÛn JimÈnez Reyes
+## Alumno:Francisco Javier MartÌnez Salinas
 
 La tarea va a consistir en modelar el movimiento de un caballo de ajedrez por el tablero de dicho juego. He subido a GitHub un esqueleto de proyecto gradle que ya lleva incluidos todos los test necesarios que el programa debe pasar. Dichos test est√°n todos comentados y deber√°s ir descoment√°ndolos conforme vayas avanzando con la tarea. La URL del repositorios es la siguiente: repositorio GitHub con el esqueleto del proyecto.
 
