@@ -8,10 +8,16 @@ public class Posicion {
 	
 	public Posicion(int fila,char columna) {
 	
-		this.fila = fila;
-		this.columna = columna;
+		if (fila < 1 || fila > 8) {
+		      throw new IllegalArgumentException("ERROR: Fila no válida.");
+		    }
+		    this.fila = fila;
+		    
+	   if (columna < 'a' || columna > 'h') {
+		      throw new IllegalArgumentException("ERROR: Columna no válida.");
+			    }
+			this.columna = columna;
 	}
-	
 	public int getFila() {
 		return fila;
 	}

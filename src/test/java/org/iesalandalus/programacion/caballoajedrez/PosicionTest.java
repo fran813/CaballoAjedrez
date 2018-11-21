@@ -14,7 +14,7 @@ public class PosicionTest {
 		assertEquals('a', posicion.getColumna());
 	}
 	
-	/*@Test
+	@Test
 	public void constructorNoValidoTest() {
 		Posicion posicion = null;
 		try {
@@ -34,7 +34,7 @@ public class PosicionTest {
 		}
 	}
 	
-	@Test
+	/*@Test
 	public void constructorCopiaTest() {
 		Posicion posicion = new Posicion(1, 'a');
 		Posicion nuevaPosicion = new Posicion(posicion);
@@ -48,7 +48,7 @@ public class PosicionTest {
 		}
 	}
 	*/
-	@Test
+	/*@Test
 	public void setFilaNoValidaTest() {
 		Posicion posicion = new Posicion(1, 'a');
 		try {
