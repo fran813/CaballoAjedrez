@@ -20,11 +20,10 @@ public class Posicion {
 	public Posicion(Posicion posicion) {
 
 		if (posicion != null) {
-			
-			
+
 			this.setFila(posicion.fila);
-	        this.setColumna(posicion.columna);
-			
+			this.setColumna(posicion.columna);
+
 		} else {
 			throw new NullPointerException("ERROR: No es posible copiar una posición nula.");
 		}
@@ -81,5 +80,5 @@ public class Posicion {
 	public String toString() {
 		return "[fila=" + fila + ", columna=" + columna + "]";
 	}
-	
+
 }
