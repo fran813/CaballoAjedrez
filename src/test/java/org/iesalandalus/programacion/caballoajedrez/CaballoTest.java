@@ -19,7 +19,7 @@ public class CaballoTest {
 		assertEquals(Color.NEGRO, caballo.getColor());
 		assertEquals(posicionDefectoNegro, caballo.getPosicion());
 	}
-	/*
+	
 	@Test
 	public void constructorUnParametroValidoTest() {
 		Caballo caballoBlanco = new Caballo(Color.BLANCO);
@@ -77,7 +77,7 @@ public class CaballoTest {
 			assertNull(caballoMalPosicionadoInicialmente);
 		}
 	}
-	
+	/*
 	@Test
     public void movimientoValidoTest() {
         Caballo caballoNegroDefecto = new Caballo();
@@ -99,7 +99,7 @@ public class CaballoTest {
             caballoNegroDefecto.mover(Direccion.IZQUIERDA_ARRIBA);
             assertEquals(new Posicion(8, 'b'), caballoNegroDefecto.getPosicion());
         } catch (OperationNotSupportedException e) {
-            fail("No debería saltar ninguna excepción ya que los movimientos son válidos.");
+            fail("No deberï¿½a saltar ninguna excepciï¿½n ya que los movimientos son vï¿½lidos.");
         }
     }
 	
@@ -178,11 +178,11 @@ public class CaballoTest {
 			assertEquals(posicionBlancoG, caballoBlancoG.getPosicion());
 		}
 	}
-	
+	*/
 	@Test
 	public void toStringTest() {
 		Caballo caballo = new Caballo();
 		assertEquals("Caballo [posiciÃ³n=[fila=8, columna=b], color=NEGRO]", caballo.toString());
-	}*/
+	}
 
 }
