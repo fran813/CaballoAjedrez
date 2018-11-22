@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.caballoajedrez;
 
+import javax.naming.OperationNotSupportedException;
+
 public class Caballo {
 	
 	private Color color;
@@ -48,6 +50,41 @@ public class Caballo {
 	}
 	private void setPosicion(Posicion posicion) {
 		this.posicion = posicion;
+	}
+	
+	public void mover(Direccion direccion) throws OperationNotSupportedException {
+		try {
+
+			switch (direccion) {
+
+			case ABAJO_DERECHA:
+				posicion = new Posicion(posicion.getFila() - 2, (char) (posicion.getColumna() + 1));
+				break;
+			case ABAJO_IZQUIERDA:
+				posicion = new Posicion(posicion.getFila() - 2, (char) (posicion.getColumna() - 1));
+				break;
+			case ARRIBA_DERECHA:
+				posicion = new Posicion(posicion.getFila() + 2, (char) (posicion.getColumna() + 1));
+				break;
+			case ARRIBA_IZQUIERDA:
+				posicion = new Posicion(posicion.getFila() + 2, (char) (posicion.getColumna() - 1));
+				break;
+			case DERECHA_ARRIBA:
+				posicion = new Posicion(posicion.getFila() + 1, (char) (posicion.getColumna() + 2));
+				break;
+			case DERECHA_ABAJO:
+				posicion = new Posicion(posicion.getFila() - 1, (char) (posicion.getColumna() + 2));
+				break;
+			case IZQUIERDA_ABAJO:
+				posicion = new Posicion(posicion.getFila() - 1, (char) (posicion.getColumna() - 2));
+				break;
+			case IZQUIERDA_ARRIBA:
+				posicion = new Posicion(posicion.getFila() + 1, (char) (posicion.getColumna() - 2));
+				break;
+			}
+		} catch (IllegalArgumentException e) {
+			throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
+		}
 	}
 
 	@Override
