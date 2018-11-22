@@ -15,9 +15,11 @@ public class Caballo {
 		if (color == Color.BLANCO) {
 			posicion = new Posicion(1, 'b');
 		}
-		else {
+		if (color == Color.NEGRO ) {
 			posicion = new Posicion(8, 'b');
 		}
+		if (color == null)
+			throw new IllegalArgumentException("ERROR: No se puede asignar un color nulo.");
 	}
 
 	public Caballo(Color color, char Columna) {
@@ -31,6 +33,8 @@ public class Caballo {
 		} else {
 			throw new IllegalArgumentException("ERROR: Columna inicial no válida.");
 		}
+		if (color == null)
+			throw new IllegalArgumentException("ERROR: No se puede asignar un color nulo.");
 	}
 	
 	public Color getColor() {

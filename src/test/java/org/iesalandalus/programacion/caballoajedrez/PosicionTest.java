@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class PosicionTest {
 
+	
 	@Test
 	public void constructorValidoTest() {
 		Posicion posicion;
@@ -13,6 +14,7 @@ public class PosicionTest {
 		assertEquals(1, posicion.getFila());
 		assertEquals('a', posicion.getColumna());
 	}
+
 	
 	@Test
 	public void constructorNoValidoTest() {
@@ -33,6 +35,8 @@ public class PosicionTest {
 			assertNull(posicion);
 		}
 	}
+
+	
 	@Test
 	public void constructorCopiaTest() {
 		Posicion posicion = new Posicion(1, 'a');

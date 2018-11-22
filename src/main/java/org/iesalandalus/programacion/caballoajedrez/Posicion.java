@@ -25,7 +25,7 @@ public class Posicion {
 			this.setColumna(posicion.columna);
 
 		} else {
-			throw new NullPointerException("ERROR: No es posible copiar una posiciÛn nula.");
+			throw new NullPointerException("ERROR: No es posible copiar una posici√≥n nula.");
 		}
 	}
 
@@ -35,7 +35,7 @@ public class Posicion {
 
 	public void setFila(int fila) {
 		if (fila < 1 || fila > 8) {
-			throw new IllegalArgumentException("ERROR: Fila no v·lida.");
+			throw new IllegalArgumentException("ERROR: Fila no v√°lida.");
 		}
 		this.fila = fila;
 	}
@@ -46,7 +46,7 @@ public class Posicion {
 
 	public void setColumna(char columna) {
 		if (columna < 'a' || columna > 'h') {
-			throw new IllegalArgumentException("ERROR: Columna no v·lida.");
+			throw new IllegalArgumentException("ERROR: Columna no v√°lida.");
 		}
 		this.columna = columna;
 	}
