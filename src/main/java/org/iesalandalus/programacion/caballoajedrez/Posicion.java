@@ -1,7 +1,5 @@
 package org.iesalandalus.programacion.caballoajedrez;
 
-import static org.junit.Assert.assertEquals;
-
 public class Posicion {
 
 	private int fila;

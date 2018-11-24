@@ -3,21 +3,21 @@ package org.iesalandalus.programacion.caballoajedrez;
 import javax.naming.OperationNotSupportedException;
 
 public class Caballo {
-	
+
 	private Color color;
 	private Posicion posicion;
-	
+
 	public Caballo() {
 		color = Color.NEGRO;
-		posicion = new Posicion (8, 'b');
+		this.posicion = new Posicion(8, 'b');
 	}
-	
+
 	public Caballo(Color color) {
-		this.color = color;
+		this.setColor(color);
 		if (color == Color.BLANCO) {
 			posicion = new Posicion(1, 'b');
 		}
-		if (color == Color.NEGRO ) {
+		if (color == Color.NEGRO) {
 			posicion = new Posicion(8, 'b');
 		}
 		if (color == null)
@@ -25,7 +25,7 @@ public class Caballo {
 	}
 
 	public Caballo(Color color, char Columna) {
-		this.color = color;
+		this.setColor(color);
 		if (Columna == 'b' || Columna == 'g') {
 			if (this.color == Color.BLANCO) {
 				posicion = new Posicion(1, Columna);
@@ -38,20 +38,23 @@ public class Caballo {
 		if (color == null)
 			throw new IllegalArgumentException("ERROR: No se puede asignar un color nulo.");
 	}
-	
+
 	public Color getColor() {
 		return color;
 	}
+
 	private void setColor(Color color) {
 		this.color = color;
 	}
+
 	public Posicion getPosicion() {
 		return posicion;
 	}
+
 	private void setPosicion(Posicion posicion) {
 		this.posicion = posicion;
 	}
-	
+
 	public void mover(Direccion direccion) throws OperationNotSupportedException {
 		try {
 
@@ -119,8 +122,5 @@ public class Caballo {
 	public String toString() {
 		return "Caballo [posición=" + posicion + ", color=" + color + "]";
 	}
-	
-	
-	
 
 }
